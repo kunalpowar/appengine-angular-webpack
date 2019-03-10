@@ -29,7 +29,17 @@ module.exports = function() {
                 {
                     test: /\.html$/,
                     loader: 'raw-loader'
-                }
+                },
+                {
+                    test: /\.(png|jpg|gif)$/i,
+                    use: [{
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name]-[hash].[ext]',
+                            outputPath: 'assets/img'
+                        }
+                    }]
+                },
             ]
         },
         plugins: [

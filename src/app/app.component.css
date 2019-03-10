@@ -4,3 +4,12 @@ span {
     background: #ccc;
     padding: 5px;
 }
+
+.sub {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    background-image: url('./pin-subscriber.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
