@@ -1,0 +1,18 @@
+runtime: go
+api_version: go1
+
+handlers:
+  - url: /assets
+    static_dir: dist/assets
+    expiration: "365d"
+    secure: always
+    
+  - url: /app.js
+    static_files: dist/app.js
+    upload: dist/app.js
+    expiration: "365d"
+    application_readable: true
+    secure: always
+
+  - url: /.*
+    script: _go_app
